@@ -1,0 +1,137 @@
+.ui-table-view {
+    position: relative;
+    h1 {
+        margin: 18px 41px -3px 41px ;
+        text-shadow: #fff 0 1px 0;
+        font-size: 17px;
+        font-weight: bold;
+        color: #555e73;
+    }
+    
+    li {
+        .box-shadow(inset 0 -1px 0 0 #cfd1d4);
+        border-bottom: 1px solid #e6e8eb;
+        position: relative;
+
+        
+        label, a {
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+            display: block;
+            padding: 13px 9px 10px 10px;
+            text-shadow: #fff 0 1px 0;
+            
+            i.icon {
+                display: inline-block;
+                width: 31px;
+            }
+        }
+        
+        span {
+            display: block;
+            text-align: right;
+            color: #385487;
+            font-weight: normal;
+        }
+        
+        .ui-switch {
+            height: 15px;
+            width: 47px;
+            padding: 6px;
+            padding-right: 24px;
+            text-align: center;
+            .border-radius(14px);
+            position: absolute;
+            right: 10px;
+            top: 8px;
+            
+            .slider {
+                .border-radius(13px);
+                visibility: visible;
+                width: 25px;
+                height: 25px;
+                background-color: #fff;
+                position: absolute;
+                top: 1px;
+                left: 51px;
+                #gradient .vertical(#d5d5d5, #ffffff);
+                @shadow: inset 0 0 2px 0 #ffffff, 0 0 1px 0px #000;
+                .box-shadow(@shadow);
+            }
+        }
+        .ui-switch.on {
+            #gradient .vertical-three-colors(#218fec, #218fec, 50%, #6eafe6);
+            @shadow: inset 0 0 0 1px #708dad, inset 0 3px 3px 0 #175b95, inset 0 10px 0 4px #007fea;
+            .box-shadow(@shadow);
+            text-shadow: #0a5497 0 -1px 0;
+            color: #fff;
+        }
+        
+        .ui-switch.off {
+            #gradient .vertical-three-colors(#f6f6f6, #f6f6f6, 50%, #fcfcfc);
+            @shadow: inset 0 0 0 1px #afafaf, inset 0 3px 3px 0 #8c8c8c, inset 0 10px 0 4px #eaeaea;
+            .box-shadow(@shadow);
+            padding-right: 4px;
+            padding-left: 24px;
+            color: rgba(0,0,0,0.4);
+            
+            .slider {
+                left: 1px;
+            }
+        }
+    }
+    
+    li a:active, li.active, li a:active span, li.active span {
+        color: #fff;
+        text-shadow: #013160 0 -1px 0;
+    }
+    li a:active, li.active {
+        #gradient .vertical(#058cf5, #015de6);
+    }
+    
+    p {
+        text-align: center;
+        color: #545e73;
+        text-shadow: #fff 0 1px 0;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    ul {
+        margin: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #b8bbbf;
+        @shadow: inset 0 1px 0 0 #e4e4e4, 0 1px 0 0 #fcfdfd;
+        .box-shadow(@shadow);
+        background-color: #f7f7f7;
+        .border-radius(10px);
+        
+        li {
+            border-bottom: 1px solid #fdfdfd;
+        }
+        
+        li:last-child {
+            border-bottom-width: 0px;
+            .box-shadow(0 0 0 0);
+        }
+        
+        li a:active:last-child {
+            .border-radius(0 0 10px 10px);
+        }
+        
+        li a:active:first-child {
+            .border-radius(10px 10px 0 0);
+        }
+        
+        li a:active:only-child {
+            .border-radius(10px);
+        }
+    }
+}
+
+.ui-table-view ul:first-child {
+    margin-top: 30px;
+}
